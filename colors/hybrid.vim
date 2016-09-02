@@ -416,6 +416,14 @@ hi! link diffAdded Special
 
 "}}}
 "
+
+exe "hi! BufTabLineCurrent"         .s:fg_background       .s:bg_green        .s:fmt_none
+exe "hi! BufTabLineActive"        .s:fg_green        .s:bg_selection   .s:fmt_none
+exe "hi! BufTabLineHidden"        .s:fg_none        .s:bg_selection   .s:fmt_none
+" exe hi! BufTabLineActive"         .s:fg_green       .s:bg_comment        .s:fmt_none
+" exe "hi! BufTabLineHidden"         .s:fg_background       .s:bg_comment        .s:fmt_none
+exe "hi! BufTabLineFill"    .s:fg_window      s:bg_none  .s:fmt_revr
+
 " This is needed for some reason: {{{
 
 let &background = s:style
