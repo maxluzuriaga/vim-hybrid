@@ -317,8 +317,6 @@ exe "hi! SpellCap"      .s:fg_blue        .s:bg_darkblue    .s:fmt_undr
 exe "hi! SpellLocal"    .s:fg_aqua        .s:bg_darkcyan    .s:fmt_undr
 exe "hi! SpellBad"      .s:fg_red         .s:bg_darkred     .s:fmt_undr
 exe "hi! SpellRare"     .s:fg_purple      .s:bg_darkpurple  .s:fmt_undr
-exe "hi! StatusLine"    .s:fg_comment     .s:bg_background  .s:fmt_revr
-exe "hi! StatusLineNC"  .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 "   TabLineFill"
 "   TabLineSel"
@@ -417,12 +415,16 @@ hi! link diffAdded Special
 "}}}
 "
 
-exe "hi! BufTabLineCurrent"         .s:fg_background       .s:bg_green        .s:fmt_none
-exe "hi! BufTabLineActive"        .s:fg_green        .s:bg_selection   .s:fmt_none
-exe "hi! BufTabLineHidden"        .s:fg_none        .s:bg_selection   .s:fmt_none
-" exe hi! BufTabLineActive"         .s:fg_green       .s:bg_comment        .s:fmt_none
-" exe "hi! BufTabLineHidden"         .s:fg_background       .s:bg_comment        .s:fmt_none
-exe "hi! BufTabLineFill"    .s:fg_window      s:bg_none  .s:fmt_revr
+" Status line colors
+" exe "hi! StatusLine"    .s:fg_background     .s:bg_foreground  .s:fmt_none
+exe "hi! StatusLine"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
+exe "hi! StatusLineNC"  .s:fg_comment      .s:bg_window     .s:fmt_none
+
+" BufTabLine colors
+exe "hi! BufTabLineCurrent" .s:fg_background  .s:bg_blue        .s:fmt_none
+exe "hi! BufTabLineActive"  .s:fg_blue        .s:bg_selection   .s:fmt_none
+exe "hi! BufTabLineHidden"  .s:fg_foreground  .s:bg_selection   .s:fmt_none
+exe "hi! BufTabLineFill"    .s:fg_none        .s:bg_window      .s:fmt_none
 
 " This is needed for some reason: {{{
 
