@@ -421,8 +421,8 @@ exe "hi! StatusLine"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! StatusLineNC"  .s:fg_comment      .s:bg_window     .s:fmt_none
 
 " BufTabLine colors
-exe "hi! BufTabLineCurrent" .s:fg_background  .s:bg_blue        .s:fmt_none
-exe "hi! BufTabLineActive"  .s:fg_blue        .s:bg_selection   .s:fmt_none
+exe "hi! BufTabLineCurrent" .s:fg_addfg       .s:bg_addbg       .s:fmt_none
+exe "hi! BufTabLineActive"  .s:fg_addfg       .s:bg_selection   .s:fmt_none
 exe "hi! BufTabLineHidden"  .s:fg_foreground  .s:bg_selection   .s:fmt_none
 exe "hi! BufTabLineFill"    .s:fg_none        .s:bg_window      .s:fmt_none
 
