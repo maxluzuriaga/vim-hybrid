@@ -415,13 +415,25 @@ hi! link diffAdded Special
 "}}}
 "
 
-" Status line colors
-" exe "hi! StatusLine"    .s:fg_background     .s:bg_foreground  .s:fmt_none
-exe "hi! StatusLine"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
-exe "hi! StatusLineNC"  .s:fg_comment      .s:bg_window     .s:fmt_none
+" Status line colors // TODO modify
+" exe "hi! StatusLine"    .s:fg_background       .s:bg_addfg       .s:fmt_none
+
+exe "hi! StatusLine"    .s:fg_foreground     .s:bg_selection  .s:fmt_none
+exe "hi! StatusLineNC"  .s:fg_comment     .s:bg_window      .s:fmt_none
+
+" Within status line // TODO modify
+
+exe "hi! User2"         .s:fg_yellow       .s:bg_selection       .s:fmt_none 
+
+" Read-only/modified flags
+exe "hi! User3"         .s:fg_red       .s:bg_selection       .s:fmt_bold
+
+exe "hi! User4"         .s:fg_addfg       .s:bg_selection       .s:fmt_none 
+
+exe "hi! User5"         .s:fg_blue       .s:bg_selection       .s:fmt_none 
 
 " BufTabLine colors
-exe "hi! BufTabLineCurrent" .s:fg_background  .s:bg_addfg       .s:fmt_bold
+exe "hi! BufTabLineCurrent" .s:fg_background  .s:bg_addfg       .s:fmt_none
 exe "hi! BufTabLineActive"  .s:fg_addfg       .s:bg_selection   .s:fmt_none
 exe "hi! BufTabLineHidden"  .s:fg_foreground  .s:bg_selection   .s:fmt_none
 exe "hi! BufTabLineFill"    .s:fg_none        .s:bg_window      .s:fmt_none
